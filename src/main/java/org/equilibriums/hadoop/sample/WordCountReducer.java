@@ -8,11 +8,11 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Reducer;
 
 /**
- * This is a reducer that will get (in our case) combined word counts and 
- * and writes out total as text.
+ * Reducer gets (in our case) combined word counts and writes out total as text.
  * 
- * If we are not using job chaining (which is in our case) the output will be 
- * written into a job output file in with 'part-r-00000' naming.
+ * The reducer will get at once all values that are collected from all the nodes for given key.
+ * 
+ * The output will be written into a job output file with 'part-r-00000' name format.
  *
  * @param <K>
  */
